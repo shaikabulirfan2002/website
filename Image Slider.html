@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f2f2f2;
+        }
+
+        #slider-container {
+            max-width: 600px;
+            overflow: hidden;
+            border: 2px solid #333;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #image-slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        img {
+            width: 19rem;
+            object-fit: cover;
+        }
+
+        button {
+            cursor: pointer;
+            font-size: 18px;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 0 8px 8px 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="slider-container">
+        <div id="image-slider">
+            <img src="./images and videos/PK 1.jpg" alt="Image 1">
+            <img src="./images and videos/Hd2.jpg" alt="Image 2">
+            <img src="./images and videos/HD4.jpg" alt="Image 3">
+        </div>
+        <button onclick="prevSlide()">❮</button>
+        <button onclick="nextSlide()">❯</button>
+    </div>
+
+    <script>
+        let currentIndex = 0;
+        const slider = document.getElementById('image-slider');
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slider.children.length;
+            updateSlider();
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + slider.children.length) % slider.children.length;
+            updateSlider();
+        }
+
+        function updateSlider() {
+            slider.style.transform = `translateX(${-currentIndex * 100}%)`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin:0px;
+            padding:0px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #body{
+            height:1000px;
+            width:100%;
+            text-align: center;
+            background-color: black;
+            color:white;
+        }
+        #btn{
+            margin-top:22%;
+            color:black;
+            
+            border:none;
+            font-size: 30px;;
+        }
+    </style>
+    <script>
+        var btn=document.getElementById("btn");
+        btn.style.color="white";
+        //btn.addEventListener(click,fun);
+        //document.getElementById("body");.style.backgroundColor="black";
+        function fun()
+        {
+            var colorslist=["red","green","pink","blue","yellow","purple"]
+            var colorIndex=parseInt(Math.random()*colorslist.length)
+            document.getElementById("body").style.backgroundColor=colorslist[colorIndex];
+        }
+        
+    </script>
+</head>
+<body>
+    <div id="body" style="background-color: red;">
+        <h1>Random Background Color</h1>
+    <button id="btn" onclick="fun()">Click Me</button>
+    </div>
+    
+
+</body></html>

@@ -1,0 +1,78 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font: 1.5rem sans-serif cursive ;
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    background-image: radial-gradient(green);
+}
+header,footer{
+    position: sticky;
+    background-color: aqua;
+    text-align: center;
+}
+header{
+    top: 0;
+}
+nav{
+    background-color: darkgreen;
+    padding: .5rem;
+    border-bottom: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    font-weight: bolder;
+
+}
+nav a ,nav a:visited{
+    color: red;
+}
+nav a:hover, nav a:focus{
+    color: yellow;
+}
+main{
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    grid-gap: 1.5rem;
+}
+footer{
+    bottom: 0;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    border: 1.5rem;
+    background-color: purple;
+    width:min(100%,420px);
+    scroll-margin-top: 8rem;
+
+}
+.card figer{
+     display: flex;
+     flex-flow: column;
+     /* border-radius: 50%; */
+}
+.card img{
+    border-radius: 50%;
+    border: 5px solid palevioletred;
+    text-align: center;
+    font-weight: bolder;
+    margin: 1rem;
+    font-size: 2rem;
+}
