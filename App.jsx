@@ -1,18 +1,14 @@
+
 import React from 'react'
 
-
-
-import "./App.css"
-import FormExample from './FormExample'
-
+import './App.css'
+import MainPage from './shoppingfolder/pages/MainPage'
 
 const App = () => {
   return (
-    <div className='contain'>
-      <h1>Welcome to React
-      </h1>
-
-   <FormExample />
+    <div>
+    
+      <MainPage />
     </div>
   )
 }
